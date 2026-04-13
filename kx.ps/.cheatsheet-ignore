@@ -1,0 +1,49 @@
+# =============================================================================
+#  .cheatsheet-ignore
+#  Patterns excluded when gen-cheatsheet.ps1 sends code to the AI.
+#  Syntax: one pattern per line. Supports wildcards and section headers.
+# =============================================================================
+
+# ── Whole sections by header comment ─────────────────────────────────────────
+# Any line matching these patterns (and content until next section) is stripped
+ENVIRONMENT & API KEYS
+SECRETS
+secrets.ps1
+.env
+
+# ── Variable name patterns ────────────────────────────────────────────────────
+# Lines containing these strings are redacted
+ANTHROPIC_API_KEY
+GEMINI_API_KEY
+GROK_API_KEY
+OPENAI_API_KEY
+GITHUB_TOKEN
+AWS_SECRET_ACCESS_KEY
+AZURE_CLIENT_SECRET
+GOOGLE_APPLICATION_CREDENTIALS
+_PASSWORD
+_SECRET
+_TOKEN
+_KEY
+$env:
+
+# ── File patterns to skip entirely ───────────────────────────────────────────
+# These files are never read or sent
+.env
+.env.*
+secrets.ps1
+*.encrypted
+*.key
+*.pem
+*.pfx
+*.p12
+
+# ── Line-level patterns ───────────────────────────────────────────────────────
+# Lines matching these regexes are redacted with [REDACTED]
+sk-ant-
+AIza
+xai-
+ghp_
+sk-
+Bearer\s
+Authorization\s*=
