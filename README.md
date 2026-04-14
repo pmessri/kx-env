@@ -6,6 +6,7 @@ shell experience with shared tooling, secret management, and environment configu
 under a single codebase.
 
 ## Project Structure
+~~~
 kx-env/
 ├── README.md
 ├── .gitignore
@@ -24,6 +25,7 @@ kx-env/
 ├── gen-cheatsheet.sh
 ├── repl.sh
 └── bootstrap.sh
+~~~
 
 ---
 
